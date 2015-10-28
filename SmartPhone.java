@@ -6,6 +6,7 @@ public class SmartPhone extends MobilePhone{
 	/**
 	 * Constructor which calls the super constructor
 	 *
+	 * @param brand is the brand needed for the parent constructor
 	 */
 	public SmartPhone(String brand) {
 		super(brand);
@@ -42,13 +43,22 @@ public class SmartPhone extends MobilePhone{
 	}
 	
 	/**
-	 * Method which returns the gps coordinates of the phone
+	 * Method which returns the GPS coordinates of the phone
 	 *
-	 * @return a String containing the gps coordinates
+	 * @return a String containing the GPS coordinates
 	 */
 	public String findPosition() {
 		String position = "";
 		position = "51.52426545314124,-0.1326239258051";
 		return "Your position is: " + position;
+	}
+	
+	/**
+	 * Public version of the private method in Mobile phone
+	 *
+	 * @param name a string which is the name of the game to be played.
+	 */
+	public void playGame(String name) {
+		System.out.println("Now playing " + name);
 	}
 }

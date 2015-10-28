@@ -46,7 +46,7 @@ public class MobilePhone extends OldPhone {
 	/**
 	 * Sounds an alarm for a given event
 	 * 
-	 * @param is the name of the event 
+	 * @param event is the name of the event 
 	 */
 	public void ringAlarm(String event) {
 		System.out.println("Its time for " + event);
@@ -57,7 +57,7 @@ public class MobilePhone extends OldPhone {
 	 *
 	 * @param name the name of the game to be played
 	 */
-	public void playGame(String name) {
+	private void playGame(String name) {
 		System.out.println("Now playing " + name);
 	}
 	
