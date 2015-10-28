@@ -11,8 +11,8 @@ public class MobilePhone extends OldPhone {
 	protected CallHistory myCallHistory;
 
 	
-	public MobilePhone() {
-		super();
+	public MobilePhone(String brand) {
+		super(brand);
 		myCallHistory = new CallHistory();
 	}
 	

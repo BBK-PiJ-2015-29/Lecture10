@@ -7,8 +7,28 @@ public class SmartPhone extends MobilePhone{
 	 * Constructor which calls the super constructor
 	 *
 	 */
-	public SmartPhone() {
-		super();
+	public SmartPhone(String brand) {
+		super(brand);
+	}
+	
+	/**
+	 * Method overrides the parent class method and checks
+	 * the number to be called to determine if it is an international
+	 * number. If so it calls the number via the internet.
+	 *
+	 * @param number the number to be called
+	 */
+	@Override
+	public void call(String number) {
+		String prefix = number.substring(0,2);
+		if (prefix.equals("00")) {
+			System.out.println("Calling " + number + 
+								" through the Internet to save money");
+			super.myCallHistory.push(number);
+		}
+		else {
+			super.call(number);
+		}
 	}
 	
 	/**
